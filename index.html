@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<style>
+body{
+	font-family: sans-serif;
+	text-rendering: optimizeLegibility
+}
+h1{
+	background-color: #7289da;
+}
+</style>
+<meta charset="utf-8">
+<html>
+<body>
+	<header class="h1">Discord</header>
+	<script type="text/javascript">
+		var bigDrop = 100000000;
+		var neidan = 100000;
+		var candidum = 409200;
+		var goldmont = 100000;
+		var hekaru = 82000;
+		var nineshark = 53700;
+		var blackrust = 52400;
+		var stalker = 42800;
+		var guildFund = 29000000000;
+		var earnings = JSON.parse();
+		var tiers;
+		var pay;
+		function calcpay(){
+			var total = guildFund * 0.4;
+			var numEaTier = [0,0,0,0,0,0,0,0,0,0];
+			for (var family in tiers){
+				numEaTier[tiers[family]]++;
+			}
+			var t1pay = 0;
+			for (i = 0;i < numEaTier.size();i++){
+				t1pay += (i+1)*numEaTier[i];
+			}
+			t1pay = t1pay/total;
+			for (var family in pay){
+				pay[family] = t1pay * tiers[family];
+			}
+		}
+
+		function calctiers(){
+			var largest = 0;
+			for (var family in earnings){
+				if(largest<earnings[family]){
+					largest = earnings[family];
+				}
+			}
+
+		}
+	</script>
+	<table>
+		<tr>
+			<td>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
