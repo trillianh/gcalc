@@ -56,11 +56,17 @@ h1{
 			getDataFromTable();
 			var tier1pay = calcpay();
 			var i = 1;
+			var memberc = 0;
 			while(i<11){
+				memberc += parseInt(numEaTier[i-1]);
 				currentpay = tier1pay * i;
 				document.getElementById("tp"+i).innerHTML = "pay: "+Math.round(currentpay).toLocaleString();
+
 				i++;
 			}
+
+			document.getElementById("membercount").innerHTML = "Members: "+memberc;
+
 		}
 		function calcpay(){
 			var total = guildFund * 0.4;
@@ -93,6 +99,7 @@ h1{
 	</script>
 	<p>Guild Funds:<input type="number" id="funds"></p>
 	<p id="bonus">Total Bonus:</p>
+	<p id="membercount">Members:</p>
 	<br>
 	<table style="border-spacing: 0;">
 			<tr><td>T1's: <input type="number" id="t1s" class="tinput"></td><td id="tp1"></td></tr>
