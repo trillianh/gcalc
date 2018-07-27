@@ -52,6 +52,7 @@ h1{
 		}
 		function refresh(){
 			guildFund = document.getElementById("funds").value;
+			document.getElementById("bonus").innerHTML = "Total Bonus: "+Math.round(guildFund*0.4).toLocaleString();
 			getDataFromTable();
 			var tier1pay = calcpay();
 			var i = 1;
@@ -91,6 +92,7 @@ h1{
 		}*/
 	</script>
 	<p>Guild Funds:<input type="number" id="funds"></p>
+	<p id="bonus">Total Bonus:</p>
 	<br>
 	<table style="border-spacing: 0;">
 			<tr><td>T1's: <input type="number" id="t1s" class="tinput"></td><td id="tp1"></td></tr>
